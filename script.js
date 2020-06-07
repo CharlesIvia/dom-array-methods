@@ -34,3 +34,10 @@ function doubleMoney() {
 
   updateDom();
 }
+
+//Sort users by richest
+
+function sortByRichest() {
+  data.sort((a, b) => b.money - a.money);
+  updateDom();
+}
