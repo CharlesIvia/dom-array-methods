@@ -1,9 +1,10 @@
 //Fetch dom elements
 const main = document.getElementById("main");
-const addUser = document.getElementById("add-user");
+const addUserBtn = document.getElementById("add-user");
 const doubleBtn = document.getElementById("double");
 const showMillionairesBtn = document.getElementById("show-millionaires");
 const sortBtn = document.getElementById("sort");
+const calculateWealthBtn = document.getElementById("calculate-wealth");
 
 let data = [];
 
@@ -94,5 +95,13 @@ function updateDom(providedData = data) {
 //Format number as money
 
 function formatMoney(number) {
-    return "$" + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+  return "$" + number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
 }
+
+//Add event listerners
+
+addUserBtn.addEventListener("click", getRandomUser);
+doubleBtn.addEventListener("click", doubleMoney);
+sortBtn.addEventListener("click", sortByRichest);
+showMillionairesBtn.addEventListener("click", showMillionaires);
+calculateWealthBtn.addEventListener("click", calculateWealth);
