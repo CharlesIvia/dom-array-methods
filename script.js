@@ -13,6 +13,8 @@ getRandomUser();
 getRandomUser();
 getRandomUser();
 getRandomUser();
+getRandomUser();
+getRandomUser();
 
 //Fetch ramdom user and money
 
