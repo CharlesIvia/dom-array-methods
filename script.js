@@ -8,6 +8,10 @@ const sortBtn = document.getElementById("sort");
 let data = [];
 
 getRandomUser();
+getRandomUser();
+getRandomUser();
+getRandomUser();
+getRandomUser();
 
 //Fetch ramdom user and money
 
@@ -57,7 +61,7 @@ function calculateWealth() {
   }, 0);
 
   const wealthEl = document.createElement("div");
-  wealthEl.innerHTML = `<h3>Total Wealth: <stron>${formatMoney(
+  wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(
     wealth
   )}</strong> </h3>`;
   main.appendChild(wealthEl);
@@ -68,4 +72,21 @@ function calculateWealth() {
 function addData(obj) {
   data.push(obj);
   updateDom();
+}
+
+//Update DOM
+
+function updateDom(providedData = data) {
+  //Clear main div
+
+  main.innerHTML = "<h2><strong>Person</strong> Wealth</h2>";
+
+  providedData.forEach((item) => {
+    const element = document.createElement("div");
+    element.classList.add("person");
+    element.innerHTML = `<strong>${item.name}</strong> ${formatMoney(
+      item.money
+    )}`;
+    main.appendChild(element);
+  });
 }
