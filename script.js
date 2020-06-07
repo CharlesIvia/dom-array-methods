@@ -7,6 +7,8 @@ const sortBtn = document.getElementById("sort");
 
 let data = [];
 
+getRandomUser();
+
 //Fetch ramdom user and money
 
 async function getRandomUser() {
@@ -23,4 +25,12 @@ async function getRandomUser() {
   addData(newUser);
 }
 
-getRandomUser();
+//Double everyones money
+
+function doubleMoney() {
+  data = data.map((user) => {
+    return { ...user, money: user.money * 2 };
+  });
+
+  updateDom();
+}
