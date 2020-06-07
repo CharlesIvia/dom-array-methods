@@ -45,10 +45,26 @@ main {
 }
 
 h2 {
-    border-bottom: 1px solid black;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 300;
-    margin: 0 0 20px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+h3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
