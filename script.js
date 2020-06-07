@@ -48,3 +48,17 @@ function showMillionaires() {
   data = data.filter((user) => user.money > 1000000);
   updateDom();
 }
+
+//Calculate total wealth
+
+function calculateWealth() {
+  const wealth = data.reduce((acc, user) => {
+    return (acc += user.money);
+  }, 0);
+
+  const wealthEl = document.createElement("div");
+  wealthEl.innerHTML = `<h3>Total Wealth: <stron>${formatMoney(
+    wealth
+  )}</strong> </h3>`;
+  main.appendChild(wealthEl);
+}
