@@ -13,9 +13,28 @@ body {
 }
 
 .container {
-    display: flex;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 800px;
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+aside {
+  padding: 10px 20px;
+  width: 250px;
+  border-right: 1px solid black;
+}
+
+button {
+  cursor: pointer;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 7.5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
 }
