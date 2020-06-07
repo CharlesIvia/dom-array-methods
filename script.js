@@ -62,3 +62,10 @@ function calculateWealth() {
   )}</strong> </h3>`;
   main.appendChild(wealthEl);
 }
+
+//Add new object to data arr
+
+function addData(obj) {
+  data.push(obj);
+  updateDom();
+}
